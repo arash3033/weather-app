@@ -1,16 +1,12 @@
 import { FC, useEffect } from "react";
 
-import WeatherCard from "../components/WeatherCard";
 import { useGetWeatherQuery } from "../lib/api/weather";
+import WeatherCard from "../components/WeatherCard";
 import style from "../styles/home.module.css";
 
 const HomePage: FC = () => {
   const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone.split("/")[1];
-  const { data, isLoading, error } = useGetWeatherQuery({
-    location: timeZone,
-    days: 7,
-  });
-  console.log(data, isLoading, error);
+  const { data, isLoading, error } = useGetWeatherQuery({ location: timeZone, days: 7 });
 
   useEffect(() => {
     if ("geolocation" in navigator) {
