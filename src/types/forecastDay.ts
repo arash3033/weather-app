@@ -1,9 +1,11 @@
+import { WeatherCondition } from "./weatherCondition";
+
 type Hour = {
   chance_of_rain: number;
   chance_of_snow: number;
   cloud: number;
   condition: {
-    text: string;
+    text: WeatherCondition;
     icon: string;
     code: number;
   };
@@ -59,7 +61,7 @@ export type ForecastDay = {
     avgvis_km: number;
     avgvis_miles: number;
     condition: {
-      text: string;
+      text: WeatherCondition;
       icon: string;
       code: number;
     };

@@ -1,0 +1,1 @@
+export type WeatherCondition = "Clear" | "Sunny" | "Patchy rain nearby" | "Cloudy" | string;

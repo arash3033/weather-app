@@ -1,4 +1,5 @@
 import { ForecastDay } from "./forecastDay";
+import { WeatherCondition } from "./weatherCondition";
 
 export type WeatherData = {
   location: {
@@ -14,7 +15,7 @@ export type WeatherData = {
   current: {
     cloud: number;
     condition: {
-      text: string;
+      text: WeatherCondition;
       icon: string;
       code: number;
     };
