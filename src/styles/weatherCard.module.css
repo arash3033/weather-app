@@ -1,0 +1,73 @@
+.topSection {
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  padding: 0px 15px;
+  margin-top: 20px;
+}
+.RightInfo {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 19px;
+}
+.RightInfo > small {
+  font-size: 1em;
+}
+.RightInfo > span {
+  font-size: 4.8em;
+  font-weight: 500;
+  line-height: 1.1;
+}
+.leftInfo {
+  width: 50%;
+}
+.leftInfo > h2 {
+  font-size: 30px;
+}
+.leftInfo > h2 > small {
+  font-size: 50%;
+}
+.weatherStatus {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 19px;
+}
+.weatherStatus > svg {
+  font-size: 1.6em;
+}
+.weatherStatus > p {
+  font-size: 24px;
+}
+.bottomSection {
+  border-top: 1px solid #fff;
+  width: 100%;
+  display: flex;
+  padding: 0px 15px;
+  margin-top: 7px;
+}
+.bottomSection > ul {
+  width: 100%;
+  display: flex;
+}
+.weatherStatusItem {
+  width: 16.66666667%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 5px;
+}
+.weatherStatusItem > h5 {
+  font-size: 14px;
+  margin: 10px 0px;
+}
+.weatherStatusItem > svg {
+  font-size: 1.5em;
+}
+.weatherStatusItem > p {
+  font-size: 14px;
+  width: fit-content;
+  margin-top: 2px;
+}

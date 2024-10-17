@@ -1,9 +1,11 @@
-import { FC } from 'react'
+import { FC } from "react";
+
+import WeatherCard from "../components/WeatherCard"
 
 const HomePage: FC = () => {
   return (
-    <div>HomePage</div>
+    <WeatherCard />
   );
-}
+};
 
-export default HomePage
+export default HomePage;
