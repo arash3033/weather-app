@@ -1,10 +1,13 @@
 import { FC } from "react";
 
-import WeatherCard from "../components/WeatherCard"
+import WeatherCard from "../components/WeatherCard";
+import style from "../styles/home.module.css";
 
 const HomePage: FC = () => {
   return (
-    <WeatherCard />
+    <div className={style.container}>
+      <WeatherCard />
+    </div>
   );
 };
 
