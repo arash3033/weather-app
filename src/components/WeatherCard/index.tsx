@@ -1,16 +1,20 @@
 import { FC } from "react";
 import { styled } from "@mui/material/styles";
-import { Card, CardContent, Typography } from "@mui/material";
+import { Card, CardContent, Skeleton, Typography } from "@mui/material";
 import { BsCloudLightningRain } from "react-icons/bs";
 
 import WeatherStatus from "./WeatherStatus";
 import style from "../../styles/weatherCard.module.css";
 
-const index: FC = () => {
+type indexProps = {
+  isLoading: boolean;
+};
+
+const index: FC<indexProps> = ({ isLoading }) => {
   const WeatherCard = styled(Card)({
     width: "430px",
     height: "256px",
-    backgroundImage: "url(https://unsplash.it/600/400?image=1043&blur)",
+    backgroundImage: isLoading ? "unset" : "url(https://unsplash.it/600/400?image=1043&blur)",
     backgroundSize: "cover",
     borderRadius: "20px",
     boxShadow: "25px 25px 40px 0px rgba(0, 0, 0, 0.33)",
@@ -25,6 +29,13 @@ const index: FC = () => {
     padding: "0px 15px !important",
   });
 
+  if (isLoading) {
+    return (
+      <WeatherCard>
+        <Skeleton variant="rounded" width={430} height={256} animation={"pulse"} />
+      </WeatherCard>
+    );
+  }
   return (
     <WeatherCard>
       <WeatherContent>
@@ -39,13 +50,13 @@ const index: FC = () => {
             </Typography>
             <div className={style.weatherStatus}>
               <BsCloudLightningRain />
-              <Typography variant="body1">
-                Rainy
-              </Typography>
+              <Typography variant="body1">Rainy</Typography>
             </div>
           </div>
           <div className={style.RightInfo}>
-            <Typography variant="body1" component={"span"}>12°</Typography>
+            <Typography variant="body1" component={"span"}>
+              12°
+            </Typography>
             <Typography variant="body2" component={"small"}>
               8° / 13°
             </Typography>
