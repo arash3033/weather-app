@@ -16,7 +16,7 @@
   font-size: 1em;
 }
 .RightInfo > span {
-  font-size: 4.8em;
+  font-size: 4em;
   font-weight: 500;
   line-height: 1.1;
 }
@@ -51,6 +51,7 @@
 .bottomSection > ul {
   width: 100%;
   display: flex;
+  gap: 3px;
 }
 .weatherStatusItem {
   width: 16.66666667%;
@@ -67,7 +68,17 @@
   font-size: 1.5em;
 }
 .weatherStatusItem > p {
-  font-size: 14px;
+  font-size: 12px;
   width: fit-content;
   margin-top: 2px;
+}
+@media screen and (max-width: 500px) {
+  .bottomSection > ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .weatherStatusItem {
+    min-width: 63px;
+  }
 }

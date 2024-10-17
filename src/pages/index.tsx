@@ -5,9 +5,9 @@ import { useGetWeatherQuery } from "../lib/api/weather";
 import style from "../styles/home.module.css";
 
 const HomePage: FC = () => {
-  const cityName = Intl.DateTimeFormat().resolvedOptions().timeZone.split("/")[1];
+  const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone.split("/")[1];
   const { data, isLoading, error } = useGetWeatherQuery({
-    location: cityName,
+    location: timeZone,
     days: 7,
   });
   console.log(data, isLoading, error);
@@ -36,7 +36,7 @@ const HomePage: FC = () => {
   }
   return (
     <div className={style.container}>
-      <WeatherCard isLoading={isLoading} />
+      <WeatherCard isLoading={isLoading} weather={data} />
     </div>
   );
 };
