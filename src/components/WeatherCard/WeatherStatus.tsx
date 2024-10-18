@@ -14,7 +14,7 @@ const WeatherStatus: FC<WeatherStatusProps> = ({ weather }) => {
       <Typography variant="h5">{new Date(weather.date).toLocaleDateString("en", { weekday: "short" })}</Typography>
       <WeatherIcon condition={weather.day.condition.text} />
       <Typography variant="body1" component={"p"}>
-        {`${weather.day.mintemp_c}°/${weather.day.mintemp_c}°`}
+        {`${weather.day.mintemp_c}°/${weather.day.mintemp_f}°`}
       </Typography>
     </li>
   );
