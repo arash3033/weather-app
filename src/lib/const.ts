@@ -1,1 +1,1 @@
-cosnt key = "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";
+cosnt key = "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_WW";
